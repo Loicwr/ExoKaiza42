@@ -124,98 +124,124 @@ namespace ExoKaiza42
                             il est averti si c'est bon ou non. Fin du jeu si trouvé ou si essais épuisés.*/
 
 
-            /*            Random aleatoire = new Random();
-                        int nbMystere = aleatoire.Next(1, 5);
-
-                        int chiffreUtilisateur = 0;
-
-                        while(chiffreUtilisateur != nbMystere)
-                        {
-                            Console.WriteLine("Trouve le chiffre aléatoire entre 1 et 5, Quel chiffre choisi tu ?");
-                                chiffreUtilisateur = Convert.ToInt32(Console.ReadLine());
-                        }*/
+/*            Random aleatoire = new Random();
+            int nbMystere = aleatoire.Next(1, 6);
+            Console.WriteLine(nbMystere);
 
 
-            /* Exercice 11 - Jours de la semaine(switch simple)
-                 Demande à l'utilisateur un chiffre entre 1 et 7. Affiche le jour de la semaine correspondant (1 = Lundi, 7 = Dimanche).*/
+            int chiffreUtilisateur = 0;
+            int tentative = 3;
+
+            Console.WriteLine("Devine le chiffre mystère entre 1 et 5 ! Tu as 3 tentatives.");
 
 
-            /*            Console.WriteLine("Entre un chiffre ( 1 à 7 )");
-                        int chiffre = Convert.ToInt32(Console.ReadLine());
 
-                        switch (chiffre)
-                        {
-                            case 1:
-                                Console.WriteLine("C'est Lundi");
-                                break;
+            while (tentative > 0)
 
-                            case 2:
-                                Console.WriteLine("C'est Mardi");
-                                break;
-
-                            case 3:
-                                Console.WriteLine("C'est Mercredi");
-                                break;
-
-                            case 4:
-                                Console.WriteLine("C'est Jeudi");
-                                break;
-
-                            case 5:
-                                Console.WriteLine("C'est Vendredi");
-                                break;
-
-                            case 6:
-                                Console.WriteLine("C'est Samedi");
-                                break;
-
-                            case 7:
-                                Console.WriteLine("C'est Dimanche");
-                                break;
-
-                            default:
-                                Console.WriteLine("Mauvais chiffre");
-                                break;
-                        }
-            */
-
-
-            /*Exercice 12 - Animaux et leurs sons(switch avec saisie)
-                Demande à l'utilisateur d'entrer le nom d'un animal courant (ex : chien, chat, vache). Selon l'animal saisi, affiche un son correspondant en utilisant un switch.*/
-
-/*            Console.WriteLine("Entrer le nom d'un animal");
-            string animal = Console.ReadLine();
-
-            switch (animal)
             {
-                case "emerick":
-                    Console.WriteLine("Ouaf Ouaf !");
-                    break;
 
-                case "chat":
-                    Console.WriteLine("Miaou !");
-                    break;
+                Console.Write("Quel chiffre choisis-tu ? ");
+                chiffreUtilisateur = Convert.ToInt32(Console.ReadLine());
 
-                case "vache":
-                    Console.WriteLine("Meuh !");
-                    break;
+                if (chiffreUtilisateur == nbMystere)
+                {
+                    Console.WriteLine("Bravo ! Tu as trouvé le chiffre mystère !");
+                    return;
+                }
+                else
+                {
+                    tentative--;
+                    if (tentative > 0)
+                    {
+                        Console.WriteLine("Mauvais chiffre. Il te reste " + tentative + " tentative(s).");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Dommage ! Tu as épuisé tes tentatives. Le chiffre était : " + nbMystere);
+                    }
+                }*/
 
-                case "coq":
-                    Console.WriteLine("Cocorico !");
-                    break;
-
-                case "canard":
-                    Console.WriteLine("Coin Coin !");
-                    break;
-
-                default:
-                    Console.WriteLine("Je ne connais pas cet animal");
-                    break;
-
-            }*/
-
+                /* Exercice 11 - Jours de la semaine(switch simple)
+                     Demande à l'utilisateur un chiffre entre 1 et 7. Affiche le jour de la semaine correspondant (1 = Lundi, 7 = Dimanche).*/
 
 
+                /*            Console.WriteLine("Entre un chiffre ( 1 à 7 )");
+                            int chiffre = Convert.ToInt32(Console.ReadLine());
+
+                            switch (chiffre)
+                            {
+                                case 1:
+                                    Console.WriteLine("C'est Lundi");
+                                    break;
+
+                                case 2:
+                                    Console.WriteLine("C'est Mardi");
+                                    break;
+
+                                case 3:
+                                    Console.WriteLine("C'est Mercredi");
+                                    break;
+
+                                case 4:
+                                    Console.WriteLine("C'est Jeudi");
+                                    break;
+
+                                case 5:
+                                    Console.WriteLine("C'est Vendredi");
+                                    break;
+
+                                case 6:
+                                    Console.WriteLine("C'est Samedi");
+                                    break;
+
+                                case 7:
+                                    Console.WriteLine("C'est Dimanche");
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Mauvais chiffre");
+                                    break;
+                            }
+                */
+
+
+                /*Exercice 12 - Animaux et leurs sons(switch avec saisie)
+                    Demande à l'utilisateur d'entrer le nom d'un animal courant (ex : chien, chat, vache). Selon l'animal saisi, affiche un son correspondant en utilisant un switch.*/
+
+                /*            Console.WriteLine("Entrer le nom d'un animal");
+                            string animal = Console.ReadLine();
+
+                            switch (animal)
+                            {
+                                case "emerick":
+                                    Console.WriteLine("Ouaf Ouaf !");
+                                    break;
+
+                                case "chat":
+                                    Console.WriteLine("Miaou !");
+                                    break;
+
+                                case "vache":
+                                    Console.WriteLine("Meuh !");
+                                    break;
+
+                                case "coq":
+                                    Console.WriteLine("Cocorico !");
+                                    break;
+
+                                case "canard":
+                                    Console.WriteLine("Coin Coin !");
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Je ne connais pas cet animal");
+                                    break;
+
+                            }*/
+
+
+
+            }
         }
     }
 }
